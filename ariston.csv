@@ -34,7 +34,7 @@ w,broadcast,ebus_reset,Reset ebus,,fe,2031,ffffffffffffffffffffffff23fe00,ebus_r
 # System Bus ID Replies (eg. 03fe203b011e) - do not parse the messages until is found a way to forward both request and reply
 # These are part of the dicovery process/initial handshake following a bus scan command, it seems that every device reply
 # to the bus scan request with a message broadcasting his own slave address 03=sender, fe=bcast, 203b=bus scan reply, 23=slave address
-# some "special" device don't respect the rule of slave address=master address+5 (eg. 00/02, 00,23)
+# some 'special' device don't respect the rule of slave address=master address+5 (eg. 00/02, 00,23)
 # r,broadcast,bus_scan_reply,Bus Scan Reply,,fe,203b,,ign,m,IGN:1
 
 # System Bus Control (??) (eg. 7ffe20380503c8030708) - probably related to devices bus role identification
@@ -374,7 +374,7 @@ r,energymgr,heatpump_dhw_buffer_op_hours,Heatpump DHW Buffer Operating Hours,,18
 
 #Broadcasted messages and grab of transmitted messages
 
-#Ext temp can be detected by multiple probes in the system (boiler, HP), it seems the system then compute the "better" one and cast it via 7647 command
+#Ext temp can be detected by multiple probes in the system (boiler, HP), it seems the system then compute the 'better' one and cast it via 7647 command
 b,energymgr,ext_temp,External Temp,,fe,200f,7647,,,SIN,10,°C
 #Boiler Ext Temp, if present: 0x7fff(32767) is the default value if the probe is missing/broken, HP ext temp probe is in the HP section of the CEV (par 7810)
 b,boiler,ext_temp,External Temp,,fe,2010,7310,,,SIN,10,°C,32767=0
@@ -589,7 +589,7 @@ r,boiler,config_version_counter,System Configuration Change Counter,,3c,2000,d14
 #r,ignored,ign3,37fe2000020220,37,fe,2000,0220
 
 # 2051 command is related to DHW time program messages, parsed only to remove from ebusd logs 
-# the related "errors" of unknown messages; the protocol has been decoded, see  
+# the related 'errors' of unknown messages; the protocol has been decoded, see  
 # https://github.com/ysard/ebusd_configuration_chaffoteaux_bridgenet#protocol-of-timer-programs
 # I won't try to implement it here because the default Ariston brand mobile app is already doing
 # a fairly decent job to do schedule programming
@@ -597,7 +597,7 @@ r,boiler,config_version_counter,System Configuration Change Counter,,3c,2000,d14
 b,ignored,ign4,QQfe2051XXXXX,,fe,2051,,ign,,IGN:14
 
 # 2050 command is PROBABLY related to HEATING/COOLING time program messages, parsed here only to 
-# remove from ebusd logs the related "errors" of unknown messages; 
+# remove from ebusd logs the related 'errors' of unknown messages; 
 # I won't try to decode/implement it here because the default Ariston brand mobile app is already doing
 # a fairly decent job to do schedule programming
 b,ignored,ign5,QQfe2050XXXXX,,fe,2050,,ign,,IGN:11
