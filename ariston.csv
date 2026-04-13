@@ -2,7 +2,7 @@
 # Menu References are based on a hybrid system, may change on boiler/heatpump only configurations.
 #
 # Circuit/class names are assigned to every field name on the base of the original source of the data
-# i.e data related to the heatpump but read from the energy manager ebus address are assigned to "heatpump"
+# i.e data related to the heatpump but read from the energy manager ebus address are assigned to 'heatpump'
 # circuit name (eg. heatpump_main_pump status)
 #
 # For a single parameter there could be multiple lines in this file:
