@@ -27,7 +27,7 @@ b,broadcast,ebus_reset,Reset ebus,,fe,2034,,ebus_reset,,onoff,,,,,,,,,,,,,,,,,,,
 w,broadcast,ebus_reset,Reset ebus,,fe,2031,ffffffffffffffffffffffff23fe00,ebus_reset,m,BCD,,,,,,,,,,,,,,,,,,,,,,
 
 # System Bus Scan and ID request  (eg. 00fe203a0123) - do not parse the messages as it doesn't contain meaningful info
-# It seems that one device "special" address (00) scan the bus with a 203a command followed by every available bus address
+# It seems that one device 'special' address (00) scan the bus with a 203a command followed by every available bus address
 # then these devices reply with a 203b message stating their owm addresses
 # r,broadcast,bus_scan,Bus Scan,00,fe,203a,,HEX,m,HEX:1
 
